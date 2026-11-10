@@ -8,11 +8,8 @@
       return;
     }
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Close" : "Menu");
     nav.classList.toggle("is-open", open);
-    var label = toggle.querySelector(".nav-toggle-label");
-    if (label) {
-      label.textContent = open ? "Close" : "Menu";
-    }
   }
 
   if (toggle && nav) {

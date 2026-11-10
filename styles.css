@@ -107,9 +107,39 @@ a:hover {
   letter-spacing: -0.02em;
 }
 
-.brand:hover,
-.brand:visited {
-  color: var(--navy);
+.brand img {
+  display: block;
+  height: 3.35rem;
+  width: auto;
+}
+
+.nav-toggle-icon,
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  display: block;
+  width: 1.15rem;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 1px;
+}
+
+.nav-toggle-icon {
+  position: relative;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle-icon::before {
+  top: -0.34rem;
+}
+
+.nav-toggle-icon::after {
+  top: 0.34rem;
 }
 
 .nav-toggle {
@@ -212,6 +242,10 @@ a:hover {
   aspect-ratio: 3 / 4;
 }
 
+.about-portrait h2 {
+  margin-top: 0.9rem;
+}
+
 .about-copy p:last-child {
   margin-bottom: 0;
 }
@@ -236,6 +270,11 @@ a:hover {
   font-size: 1.2rem;
   line-height: 1.55;
   margin-bottom: 0;
+}
+
+.mission + p {
+  font-size: 1.2rem;
+  line-height: 1.55;
 }
 
 .actions {
@@ -269,8 +308,9 @@ a:hover {
 }
 
 .btn-primary:hover {
-  background: var(--navy-deep);
-  border-color: var(--navy-deep);
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
 }
 
 .btn-secondary,
@@ -281,6 +321,18 @@ a:hover {
 
 .btn-secondary:hover {
   background: #f4f6f8;
+}
+
+.btn[data-schedule] {
+  background: var(--sage);
+  border-color: var(--sage);
+  color: var(--navy);
+}
+
+.btn[data-schedule]:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
 }
 
 .btn:focus-visible,
@@ -336,6 +388,23 @@ h3 {
 .lede {
   max-width: 40rem;
   font-size: 1.15rem;
+}
+
+.resource-list {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.resource-list li {
+  margin: 0.85rem 0;
+}
+
+.sample-tag {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--sage-ink);
+  font-size: 0.95rem;
 }
 
 .service-grid,
@@ -564,6 +633,11 @@ textarea {
 
 .copy {
   margin-top: 1.25rem;
+  color: #e4ebf2;
+}
+
+.site-credit {
+  margin-top: 0.35rem;
   color: #e4ebf2;
 }
 

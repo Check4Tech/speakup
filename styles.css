@@ -208,6 +208,10 @@ a:hover {
   margin: 0;
 }
 
+.about-layout .scene img {
+  aspect-ratio: 3 / 4;
+}
+
 .about-copy p:last-child {
   margin-bottom: 0;
 }

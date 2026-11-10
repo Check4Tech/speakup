@@ -161,8 +161,55 @@ a:hover {
 
 .hero-layout {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.75rem;
   align-items: center;
+}
+
+.hero-layout > *,
+.about-layout > *,
+.service-grid > *,
+.contact-grid > * {
+  min-width: 0;
+}
+
+.scene {
+  margin: 0 0 1.35rem;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.scene img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #f4f6f4;
+}
+
+.scene-wide {
+  margin: 2.5rem 0 0;
+}
+
+.scene-wide img {
+  aspect-ratio: 16 / 9;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.about-layout .scene {
+  margin: 0;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
 }
 
 .hero h1 {
@@ -290,6 +337,7 @@ h3 {
 .service-grid,
 .contact-grid {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2.25rem;
 }
 
@@ -570,7 +618,7 @@ textarea {
 @media (min-width: 800px) {
   .service-grid,
   .contact-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 3rem;
     align-items: start;
   }
@@ -579,6 +627,11 @@ textarea {
 @media (min-width: 880px) {
   .hero-layout {
     grid-template-columns: minmax(16rem, 26rem) minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .about-layout {
+    grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr);
     gap: 3rem;
   }
 }

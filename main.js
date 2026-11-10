@@ -69,22 +69,6 @@
     });
   });
 
-  var form = document.querySelector("#contact-form");
-  if (form) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      var status = document.getElementById("form-status");
-      var lead = document.getElementById("form-status-lead");
-      if (lead) {
-        lead.textContent = "Nothing was sent. This form is not connected yet.";
-      }
-      if (status) {
-        status.classList.add("is-confirmed");
-        status.focus();
-      }
-    });
-  }
-
   var navLinks = document.querySelectorAll(".site-nav a");
 
   function markCurrent() {

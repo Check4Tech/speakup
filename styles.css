@@ -340,7 +340,8 @@ a:hover {
 .brand:focus-visible,
 .site-nav a:focus-visible,
 input:focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+select:focus-visible {
   outline: 3px solid var(--sage);
   outline-offset: 3px;
 }
@@ -440,8 +441,34 @@ h3 {
   background: var(--sage);
 }
 
+#faq .measure {
+  width: min(42rem, 100%);
+  margin-inline: auto;
+}
+
 .faq-form {
+  width: 100%;
   margin: 1.5rem 0 1.25rem;
+}
+
+.faq-contact-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 1rem;
+}
+
+.faq-form .field-contact input,
+.faq-form .field-contact select {
+  width: 100%;
+}
+
+.faq-form .actions {
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-form .btn {
+  width: auto;
 }
 
 .faq-close {
@@ -504,7 +531,8 @@ address {
 }
 
 input,
-textarea {
+textarea,
+select {
   width: 100%;
   padding: 0.65rem 0.75rem;
   border: 1px solid #c5ccd4;

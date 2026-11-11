@@ -26,7 +26,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#information">Information</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#faq">Questionnaire</a></li>
         </ul>
       </nav>
     </div>
@@ -160,6 +160,7 @@
               </address>
             </div>
             <p>Phone: <a href="tel:+15164564426">(516) 456-4426</a></p>
+            <p>Email: <a id="contact-email"></a></p>
             <p>Fax: (631) 589-6431</p>
           </div>
           <div>
@@ -174,10 +175,47 @@
     <section id="faq" class="section">
       <div class="wrap">
         <div class="measure">
-          <h2>FAQ</h2>
+          <h2>Questionnaire</h2>
           <p>A parent is a child’s first teacher. You know your child across home, school, and the rest of the day. You notice when something is not quite right. That might be health, mood, eating, or learning.</p>
           <p>I offer these questions so you can look steadily at what you already see.</p>
           <form id="faq-form" class="faq-form">
+            <div class="faq-contact-row">
+              <div class="field field-contact">
+                <label for="faq-name">Name</label>
+                <input id="faq-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field field-contact">
+                <label for="faq-email">Email</label>
+                <input id="faq-email" name="email" type="email" autocomplete="email" required>
+              </div>
+            </div>
+            <div class="faq-contact-row">
+              <div class="field field-contact">
+                <label for="faq-phone">Phone</label>
+                <input id="faq-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="14" pattern="\(\d{3}\) \d{3}-\d{4}" required>
+              </div>
+              <div class="field field-contact">
+                <label for="faq-child-age">Child age</label>
+                <select id="faq-child-age" name="child-age">
+                  <option value="">Select age</option>
+                  <option>4 years</option>
+                  <option>5 years</option>
+                  <option>6 years</option>
+                  <option>7 years</option>
+                  <option>8 years</option>
+                  <option>9 years</option>
+                  <option>10 years</option>
+                  <option>11 years</option>
+                  <option>12 years</option>
+                  <option>13 years</option>
+                  <option>14 years</option>
+                  <option>15 years</option>
+                  <option>16 years</option>
+                  <option>17 years</option>
+                  <option>18 years</option>
+                </select>
+              </div>
+            </div>
             <div class="field">
               <label for="faq-q1">Do you feel that your child is struggling as a learner but you are unsure you understand why or how?</label>
               <textarea id="faq-q1" name="q1" rows="3"></textarea>
@@ -217,6 +255,9 @@
             <div class="field">
               <label for="faq-q10">Do you feel your questions don’t always get answered to your satisfaction, or that your concerns aren’t getting the attention you think they deserve?</label>
               <textarea id="faq-q10" name="q10" rows="3"></textarea>
+            </div>
+            <div class="actions">
+              <button class="btn btn-primary" type="submit">Submit</button>
             </div>
           </form>
           <p class="faq-close">Your answers can help you decide whether an educational advocate should join your child’s learning team.</p>

@@ -41,22 +41,12 @@
     }
   }
 
-  var items = document.querySelectorAll(".faq-list details");
-  var faqLock = false;
-  items.forEach(function (item) {
-    item.addEventListener("toggle", function () {
-      if (faqLock || !item.open) {
-        return;
-      }
-      faqLock = true;
-      items.forEach(function (other) {
-        if (other !== item) {
-          other.open = false;
-        }
-      });
-      faqLock = false;
+  var faqForm = document.querySelector("#faq-form");
+  if (faqForm) {
+    faqForm.addEventListener("submit", function (event) {
+      event.preventDefault();
     });
-  });
+  }
 
   /* Schedule has no calendar yet. The click must not navigate. */
   document.querySelectorAll("[data-schedule]").forEach(function (button) {
